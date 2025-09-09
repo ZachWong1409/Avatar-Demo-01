@@ -1,15 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Streaming Avatar Demo</title>
-    <script type="module" crossorigin src="/assets/index-642572e2.js"></script>
-    <link rel="stylesheet" href="/assets/index-cafb6ac8.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar Chat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            height: 100vh;
+            background-image: url('acsmpage.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .chat-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .chat-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        .chat-button img {
+            display: block;
+            max-width: 200px;
+            height: auto;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .chat-button {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .chat-button img {
+                max-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-button" onclick="window.location.href='avatar.html'">
+        <img src="letsChat.png" alt="Let's Chat">
+    </div>
+</body>
 </html>
